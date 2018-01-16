@@ -1,10 +1,6 @@
 package com.mj.controller;
-import com.mj.model.User;
 import com.mj.service.IUserService;
 import org.apache.log4j.Logger;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,10 +19,14 @@ public class UserController {
     @RequestMapping("/index")
     public String index(){
         logger.info("请求成功!");
-        System.out.println(userService.getUser(1));
-        return "/index";
+        soutAAA();
+//        System.out.println(userService.getUser(1));
+        return "index";
     }
 
+    public void soutAAA(){
+        System.out.println("FDFDsss");
+    }
 
 //    //用户登录
 //    @ResponseBody
